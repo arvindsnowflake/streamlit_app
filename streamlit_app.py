@@ -40,6 +40,6 @@ streamlit.dataframe(my_data_row)
 fruit_add = streamlit.text_input('what fruit would you like to add ?', 'Kiwi')
 
 stmt = "insert into fruit_load_list values (?)"
-my_cur.execuremany(stmt, fruit_add)
+my_cur.executemany(stmt, fruit_add)
 streamlit.write('Thanks for adding', fruit_add)
 
